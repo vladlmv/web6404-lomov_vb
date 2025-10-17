@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туры - Путешествуй с нами</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Путешествуй с нами</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="tours.html" class="active">Туры</a></li>
+                    <li><a href="booking.html">Бронирование</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Наши туры</h2>
+            <p>Выберите направление для вашего следующего путешествия</p>
+        </div>
+    </section>
+
+    <section class="tours-list">
+        <div class="container">
+            <div class="tour-detail" id="turkey">
+                <div class="tour-image">
+                    <img src="images/turkey.avif" alt="Турция">
+                </div>
+                <div class="tour-info">
+                    <h3>Турция: Анталия и Стамбул</h3>
+                    <p>Откройте для себя красоту Турции с нашим эксклюзивным туром. Посетите знаменитые достопримечательности Стамбула и насладитесь отдыхом на пляжах Анталии.</p>
+                    <ul>
+                        <li>Продолжительность: 10 дней</li>
+                        <li>Питание: все включено</li>
+                        <li>Цена: от 75 000 руб.</li>
+                    </ul>
+                    <a href="booking.html?tour=turkey" class="btn">Забронировать</a>
+                </div>
+            </div>
+
+            <div class="tour-detail" id="greece">
+                <div class="tour-image">
+                    <img src="images/greece.avif" alt="Греция">
+                </div>
+                <div class="tour-info">
+                    <h3>Греция: Афины и острова</h3>
+                    <p>Погрузитесь в древнюю историю и насладитесь красотой греческих островов. Посетите Акрополь, Парфенон и отдохните на пляжах Санторини.</p>
+                    <ul>
+                        <li>Продолжительность: 12 дней</li>
+                        <li>Питание: завтраки</li>
+                        <li>Цена: от 90 000 руб.</li>
+                    </ul>
+                    <a href="booking.html?tour=greece" class="btn">Забронировать</a>
+                </div>
+            </div>
+
+            <div class="tour-detail" id="italy">
+                <div class="tour-image">
+                    <img src="images/italy.avif" alt="Италия">
+                </div>
+                <div class="tour-info">
+                    <h3>Италия: Рим, Флоренция и Венеция</h3>
+                    <p>Откройте для себя сокровища Италии: от древнего Рима до романтической Венеции. Посетите Колизей, собор Святого Петра и прокатитесь на гондоле.</p>
+                    <ul>
+                        <li>Продолжительность: 14 дней</li>
+                        <li>Питание: завтраки</li>
+                        <li>Цена: от 100 000 руб.</li>
+                    </ul>
+                    <a href="booking.html?tour=italy" class="btn">Забронировать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-table">
+        <div class="container">
+            <h2>Сравнение туров</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Направление</th>
+                        <th>Продолжительность</th>
+                        <th class="text-right">Цена от</th>
+                        <th class="text-center">Питание</th>
+                        <th class="text-center">Рейтинг</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Турция</td>
+                        <td>10 дней</td>
+                        <td class="text-right">75 000 руб.</td>
+                        <td class="text-center">Все включено</td>
+                        <td class="text-center">4.8/5</td>
+                    </tr>
+                    <tr>
+                        <td>Греция</td>
+                        <td>12 дней</td>
+                        <td class="text-right">90 000 руб.</td>
+                        <td class="text-center">Завтраки</td>
+                        <td class="text-center">4.9/5</td>
+                    </tr>
+                    <tr>
+                        <td>Италия</td>
+                        <td>14 дней</td>
+                        <td class="text-right">100 000 руб.</td>
+                        <td class="text-center">Завтраки</td>
+                        <td class="text-center">4.7/5</td>
+                    </tr>
+                    <tr>
+                        <td>Испания</td>
+                        <td>11 дней</td>
+                        <td class="text-right">85 000 руб.</td>
+                        <td class="text-center">Полупансион</td>
+                        <td class="text-center">4.6/5</td>
+                    </tr>
+                    <tr>
+                        <td>Франция</td>
+                        <td>13 дней</td>
+                        <td class="text-right">105 000 руб.</td>
+                        <td class="text-center">Завтраки</td>
+                        <td class="text-center">4.8/5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Путешествуй с нами. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

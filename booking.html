@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование - Путешествуй с нами</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Путешествуй с нами</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="tours.html">Туры</a></li>
+                    <li><a href="booking.html" class="active">Бронирование</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Бронирование тура</h2>
+            <p>Заполните форму для бронирования вашего путешествия</p>
+        </div>
+    </section>
+
+    <section class="booking-form">
+        <div class="container">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="tour">Выберите тур:</label>
+                    <select id="tour" name="tour" required>
+                        <option value="">-- Выберите тур --</option>
+                        <option value="turkey">Турция: Анталия и Стамбул</option>
+                        <option value="greece">Греция: Афины и острова</option>
+                        <option value="italy">Италия: Рим, Флоренция и Венеция</option>
+                        <option value="spain">Испания: Барселона и Мадрид</option>
+                        <option value="france">Франция: Париж и Лазурный берег</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Дата начала тура:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="people">Количество человек:</label>
+                    <input type="number" id="people" name="people" min="1" max="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Тип размещения:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="single" name="accommodation" value="single" required>
+                        <label for="single">Одноместное</label>
+                        
+                        <input type="radio" id="double" name="accommodation" value="double">
+                        <label for="double">Двухместное</label>
+                        
+                        <input type="radio" id="family" name="accommodation" value="family">
+                        <label for="family">Семейное</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">ФИО:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Дополнительные пожелания:</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Я согласен с условиями бронирования и политикой конфиденциальности</label>
+                </div>
+
+                <button type="submit" class="btn">Забронировать тур</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Путешествуй с нами. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
