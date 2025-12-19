@@ -1,0 +1,58 @@
+{
+    "/bookings": {
+        "post": {
+            "data": {
+                "success": true,
+                "message": "Бронирование успешно создано",
+                "id": 1
+            }
+        }
+    },
+    "/tours": {
+        "get": {
+            "data": [
+                {
+                    "id": 1,
+                    "destination": "Турция",
+                    "duration": "10 дней",
+                    "price": "75 000 руб.",
+                    "nutrition": "Все включено",
+                    "rating": "4.8/5"
+                },
+                {
+                    "id": 2,
+                    "destination": "Греция",
+                    "duration": "12 дней",
+                    "price": "90 000 руб.",
+                    "nutrition": "Завтраки",
+                    "rating": "4.9/5"
+                },
+                {
+                    "id": 3,
+                    "destination": "Италия",
+                    "duration": "14 дней",
+                    "price": "100 000 руб.",
+                    "nutrition": "Завтраки",
+                    "rating": "4.7/5"
+                },
+                {
+                    "id": 4,
+                    "destination": "Испания",
+                    "duration": "11 дней",
+                    "price": "85 000 руб.",
+                    "nutrition": "Полупансион",
+                    "rating": "4.6/5"
+                },
+                {
+                    "id": 5,
+                    "destination": "Франция",
+                    "duration": "13 дней",
+                    "price": "105 000 руб.",
+                    "nutrition": "Завтраки",
+                    "rating": "4.8/5"
+                }
+            ]
+        }
+    }
+}
+

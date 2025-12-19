@@ -1,0 +1,500 @@
+/* Общие стили */
+:root {
+    --bg-body: #f9f9f9;
+    --bg-contrast: #f5f5f5;
+    --bg-stripe: #f9f9f9;
+    --text-main: #333333;
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --primary-rgb: 52, 152, 219;
+    --secondary: #2ecc71;
+    --secondary-dark: #27ae60;
+    --secondary-rgb: 46, 204, 113;
+    --dark: #2c3e50;
+    --dark-rgb: 44, 62, 80;
+    --muted: #34495e;
+    --card: #ffffff;
+    --text-inverse: #ffffff;
+    --white-rgb: 255, 255, 255;
+    --black-rgb: 0, 0, 0;
+    --shadow: 0 2px 5px rgba(var(--black-rgb), 0.1);
+    --border: #dddddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Стили для ссылок */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Стили для кнопок */
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--text-inverse);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 25px rgba(var(--primary-rgb), 0.25);
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    color: var(--text-inverse);
+    box-shadow: 0 15px 30px rgba(var(--primary-rgb), 0.35);
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--text-inverse);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-small:hover {
+    background-color: var(--secondary-dark);
+    color: var(--text-inverse);
+}
+
+/* Стили для шапки */
+header {
+    background-color: var(--dark);
+    color: var(--text-inverse);
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--text-inverse);
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: var(--text-inverse);
+    font-weight: bold;
+}
+
+nav a.active {
+    color: var(--primary);
+}
+
+/* Стили для героя */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(var(--black-rgb),0.55), rgba(var(--black-rgb),0.55)), url('images/main.avif');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-inverse);
+    text-align: center;
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(var(--white-rgb),0.15), transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(var(--white-rgb),0.12), transparent 35%);
+    animation: aurora 12s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-inverse);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    position: relative;
+    animation: lift 3.5s ease-in-out infinite;
+}
+
+/* Стили для секций */
+section {
+    padding: 4rem 0;
+}
+
+.page-header {
+    background-color: var(--muted);
+    color: var(--text-inverse);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.page-header h2 {
+    color: var(--text-inverse);
+}
+
+/* Стили для сеток */
+.features-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.feature {
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    flex: 1 1 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(52,152,219,0.08), rgba(46,204,113,0.08));
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.feature:hover::after {
+    opacity: 1;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tour-card {
+    background-color: var(--card);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tour-card h3, .tour-card p {
+    padding: 0 1rem;
+}
+
+.tour-card .btn-small {
+    margin: 1rem;
+}
+
+/* Стили для деталей тура */
+.tour-detail {
+    display: flex;
+    margin-bottom: 3rem;
+    background-color: var(--card);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.tour-image {
+    flex: 1;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour-info {
+    flex: 1;
+    padding: 2rem;
+}
+
+.tour-info ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+/* Стили для таблицы */
+.pricing-table {
+    background-color: var(--bg-contrast);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card);
+    box-shadow: var(--shadow);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background-color: var(--muted);
+    color: var(--text-inverse);
+    font-weight: bold;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: var(--bg-stripe);
+}
+
+/* Стили для форм */
+.booking-form, .contact-form-section {
+    background-color: var(--card);
+    padding: 3rem;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+/* Стили для контактов */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.map-placeholder {
+    text-align: center;
+}
+
+.map-placeholder img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: var(--dark);
+    color: var(--text-inverse);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Анимации */
+@keyframes aurora {
+    0% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(-12px); opacity: 1; }
+    100% { transform: translateY(8px); opacity: 0.9; }
+}
+
+@keyframes lift {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* Стили для валидации форм */
+.form-hint {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.hint-valid {
+    color: var(--secondary-dark);
+    background-color: rgba(var(--secondary-rgb), 0.1);
+}
+
+.hint-invalid {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.input-valid {
+    border-color: var(--secondary);
+}
+
+.input-invalid {
+    border-color: #e74c3c;
+}
+
+input:focus.input-valid,
+select:focus.input-valid,
+textarea:focus.input-valid {
+    outline-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(var(--secondary-rgb), 0.1);
+}
+
+input:focus.input-invalid,
+select:focus.input-invalid,
+textarea:focus.input-invalid {
+    outline-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для таблицы с динамическими данными */
+.tours-table-container {
+    position: relative;
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted);
+}
+
+.error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.refresh-info {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}

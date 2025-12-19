@@ -1,0 +1,19 @@
+{
+  "name": "travel-website",
+  "version": "1.0.0",
+  "description": "Веб-сайт туристического агентства",
+  "scripts": {
+    "api": "mock-json-server data.json",
+    "server": "http-server -p 8080",
+    "start": "npm run api",
+    "dev": "npm run server"
+  },
+  "keywords": ["travel", "tourism", "website"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mock-json-server": "^0.3.0",
+    "http-server": "^14.1.1"
+  }
+}
+
